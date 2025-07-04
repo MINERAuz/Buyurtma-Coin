@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Notcoin Mini App</title>
+    <style>
+        body { text-align: center; font-family: sans-serif; margin-top: 50px; }
+        button { padding: 10px 20px; font-size: 16px; }
+    </style>
+</head>
+<body>
+    <h1>NOT COIN 💰</h1>
+    <p>Balans: <span id="balance">{{ balance }}</span></p>
+    <button onclick="increment()">+1</button>
+    <script>
+        let balance = {{ balance }};
+        function increment() {
+            balance += 1;
+            document.getElementById("balance").innerText = balance;
+        }
+    </script>
+</body>
+</html>
